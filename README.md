@@ -1,5 +1,7 @@
 # Voll.med API
 
+<img width="480" height="600" alt="Image" src="https://github.com/user-attachments/assets/505b3620-a4d3-49d3-918d-712a16530fb6" />
+
 API Rest da aplicação Voll.med, contendo as funcionalidades de CRUD de médicos e de pacientes, além de agendamento e cancelamento de consultas.
 
 ## 📋 Sobre o Projeto

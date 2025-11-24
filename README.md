@@ -98,8 +98,28 @@ A aplicação utiliza variáveis de ambiente para configurações sensíveis, de
 
 ### Executar a Aplicação
 
-1.  **Clone o repositório**;
-2.  **Compile e execute (via Maven Wrapper)**.
+### 🏃 Executando a Aplicação
+
+1.  **Clone o repositório:**
+
+    ```bash
+    git clone <seu-repositorio-url>
+    cd Voll_API
+    ```
+
+2.  **Compile e instale as dependências:**
+
+    ```bash
+    ./mvnw clean install
+    ```
+
+3.  **Inicie a aplicação:**
+
+    ```bash
+    ./mvnw spring-boot:run
+    ```
+
+    A API ficará disponível em `http://localhost:8080`.
 
 A aplicação estará disponível em `http://localhost:8080` (configuração padrão do Tomcat).
 
@@ -132,6 +152,51 @@ Principais objetos utilizados para envio e receção de dados na API.
 * **`DadosEndereco`**: Estrutura comum para médicos e pacientes (logradouro, bairro, cep, cidade, uf, complemento, número).
 * **`DadosAutenticacao`**: Login e senha para o endpoint de login.
 * **`Pageable`**: Estrutura padrão do Spring para controlo de paginação (page, size, sort).
+
+### 🔓 Exemplo de Login (Obter Token)
+
+**Via cURL (Windows CMD):**
+
+```cmd
+curl -X POST http://localhost:8080/login ^
+  -H "Content-Type: application/json" ^
+  -d "{\"login\":\"<COLE_SEU_EMAIL_AQUI>\", \"senha\":\"<COLE_SUA_SENHA_AQUI>\"}"
+```
+
+### 🔑 Exemplo de Requisição com Token
+
+Para acessar os endpoints protegidos (todos exceto `/login`), é obrigatório enviar o token JWT no cabeçalho `Authorization` da requisição.
+
+**Exemplo via cURL (Listar Médicos) no Windows CMD:**
+
+```bash
+curl -X GET http://localhost:8080/medicos ^
+  -H "Authorization: Bearer <COLE_SEU_TOKEN_AQUI>"
+```
+
+### 🐧 Exemplos para Linux / macOS (Terminal Bash)
+
+**1. Login (Obter Token)**
+Use aspas simples `'` para envolver o JSON, facilitando a escrita.
+
+```bash
+curl -X POST http://localhost:8080/login \
+  -H "Content-Type: application/json" \
+  -d '{"login":"COLE_SEU_EMAIL_AQUI", "senha":"COLE_SUA_SENHA_AQUI"}'
+```
+**2. Requisição Autenticada (Listar Médicos)**
+Copie o token gerado no passo anterior (sem as aspas) e substitua abaixo.
+
+```bash
+curl -X GET http://localhost:8080/medicos \
+  -H "Authorization: Bearer <COLE_SEU_TOKEN_AQUI>"
+```
+
+**OBSERVAÇÃO**
+
+No ponto atual do projeto, não existe um endpoint (rota) na API para cadastrar novos usuários de sistema (a classe Usuario). O AutenticacaoController possui apenas a lógica de login, e as migrations apenas criam a tabela sem popular dados.
+
+Portanto, para conseguir fazer o login e obter um token, você precisará inserir um usuário manualmente no banco de dados.
 
 ## 🧪 Testes
 

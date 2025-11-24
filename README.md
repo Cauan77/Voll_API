@@ -125,7 +125,7 @@ A aplicação estará disponível em `http://localhost:8080` (configuração pad
 
 Para facilitar na hora de realizar as requisições, clique no botão abaixo:
 
-[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](docs/postman_collection.json)
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](api/postman_collection.json)
 
 ## 📚 Documentação da API
 

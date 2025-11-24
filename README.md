@@ -123,11 +123,9 @@ A aplicação utiliza variáveis de ambiente para configurações sensíveis, de
 
 A aplicação estará disponível em `http://localhost:8080` (configuração padrão do Tomcat).
 
-Para facilitar na hora de realizar as requisições, clique no botão abaixo para ser redirecionado para o arquivo com o json do postman ou clique no link para ser redirecionado diretamente para o site do postman:
+Para facilitar na hora de realizar as requisições, clique no botão abaixo para ser redirecionado para o arquivo com o json do postman:
 
 [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](api/postman_collection.json) 
-
-<a href="https://cauanhenrique-5346646.postman.co/workspace/My-Workspace~e9bf2c1c-8e69-4dba-848f-89f71c00063e/collection/44958282-3ccfc689-a850-42e7-98d2-094d4267cbf5?action=share&creator=44958282" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; border-radius: 5px;">Lista de requisições</a>
 
 ## 📚 Documentação da API
 

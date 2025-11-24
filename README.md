@@ -199,8 +199,8 @@ No ponto atual do projeto, não existe um endpoint (rota) na API para cadastrar 
 Portanto, para conseguir fazer o login e obter um token, você precisará inserir um usuário manualmente no banco de dados.
 
 **Exemplo:**
--- Se a senha for '123456' hashada com BCrypt, então você faria o seguinte insert no banco de dados MySQL:
-INSERT INTO usuarios (login, senha) VALUES ('admin@voll.med', '$2a$10$Y50UaMFOxteibQEYLrwuux.cnFAloafL9QeJ14.5i.5ac2M4.q');
+-- Se a senha for '123456', você terá que fazer um hash com BCrypt e ficará mais ou menos assim:
+INSERT INTO usuarios (login, senha) VALUES ('admin@voll.med', '$2a$12$gR2SQl0HUXlIvwUq8Ah4EO17GLvRhMXZ6w2g6QTCqRkelhBGZRqzS');
 
 ## 🧪 Testes
 

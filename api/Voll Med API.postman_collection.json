@@ -1,0 +1,530 @@
+{
+	"info": {
+		"_postman_id": "3ccfc689-a850-42e7-98d2-094d4267cbf5",
+		"name": "Voll Med API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44958282"
+	},
+	"item": [
+		{
+			"name": "/pacientes",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ _.bearerToken }}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ _.base_url }}/pacientes?paginacao=[object Object]",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"pacientes"
+					],
+					"query": [
+						{
+							"key": "paginacao",
+							"value": "[object Object]"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/pacientes",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ _.bearerToken }}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 0,\n  \"nome\": \"string\",\n  \"telefone\": \"string\",\n  \"endereco\": {\n    \"logradouro\": \"string\",\n    \"bairro\": \"string\",\n    \"cep\": \"string\",\n    \"cidade\": \"string\",\n    \"uf\": \"string\",\n    \"complemento\": \"string\",\n    \"numero\": \"string\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ _.base_url }}/pacientes",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"pacientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/pacientes",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ _.bearerToken }}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nome\": \"string\",\n  \"email\": \"string\",\n  \"cpf\": \"string\",\n  \"telefone\": \"string\",\n  \"endereco\": {\n    \"logradouro\": \"string\",\n    \"bairro\": \"string\",\n    \"cep\": \"string\",\n    \"cidade\": \"string\",\n    \"uf\": \"string\",\n    \"complemento\": \"string\",\n    \"numero\": \"string\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ _.base_url }}/pacientes",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"pacientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/medicos",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ _.bearerToken }}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 0,\n  \"nome\": \"string\",\n  \"telefone\": \"string\",\n  \"endereco\": {\n    \"logradouro\": \"string\",\n    \"bairro\": \"string\",\n    \"cep\": \"string\",\n    \"cidade\": \"string\",\n    \"uf\": \"string\",\n    \"complemento\": \"string\",\n    \"numero\": \"string\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ _.base_url }}/medicos",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"medicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/medicos",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ _.bearerToken }}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ _.base_url }}/medicos?paginacao=[object Object]",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"medicos"
+					],
+					"query": [
+						{
+							"key": "paginacao",
+							"value": "[object Object]"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/medicos",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ _.bearerToken }}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nome\": \"string\",\n  \"email\": \"string\",\n  \"telefone\": \"string\",\n  \"crm\": \"string\",\n  \"especialidade\": \"string\",\n  \"endereco\": {\n    \"logradouro\": \"string\",\n    \"bairro\": \"string\",\n    \"cep\": \"string\",\n    \"cidade\": \"string\",\n    \"uf\": \"string\",\n    \"complemento\": \"string\",\n    \"numero\": \"string\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ _.base_url }}/medicos",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"medicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/login",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"login\": \"string\",\n  \"senha\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ _.base_url }}/login",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/consultas",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ _.bearerToken }}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"idMedico\": 0,\n  \"idPaciente\": 0,\n  \"data\": \"2025-11-24T22:22:05.983Z\",\n  \"especialidade\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ _.base_url }}/consultas",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"consultas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/pacientes/{id}",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ _.bearerToken }}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ _.base_url }}/pacientes/{{ _.id }}",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"pacientes",
+						"{{ _.id }}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/consultas",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ _.bearerToken }}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"idConsulta\": 0,\n  \"motivoCancelamento\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ _.base_url }}/consultas",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"consultas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/pacientes/{id}",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ _.bearerToken }}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{ _.base_url }}/pacientes/{{ _.id }}",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"pacientes",
+						"{{ _.id }}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/medicos/{id}",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ _.bearerToken }}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ _.base_url }}/medicos/{{ _.id }}",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"medicos",
+						"{{ _.id }}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/medicos/{id}",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ _.bearerToken }}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{ _.base_url }}/medicos/{{ _.id }}",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"medicos",
+						"{{ _.id }}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -198,6 +198,10 @@ No ponto atual do projeto, não existe um endpoint (rota) na API para cadastrar 
 
 Portanto, para conseguir fazer o login e obter um token, você precisará inserir um usuário manualmente no banco de dados.
 
+**Exemplo:**
+-- Se a senha for '123456' hashada com BCrypt, então você faria o seguinte insert no banco de dados MySQL:
+INSERT INTO usuarios (login, senha) VALUES ('admin@voll.med', '$2a$10$Y50UaMFOxteibQEYLrwuux.cnFAloafL9QeJ14.5i.5ac2M4.q');
+
 ## 🧪 Testes
 
 O projeto inclui testes unitários e de integração utilizando JUnit e Mockito. Para correr os testes, certifique-se de configurar a variável de ambiente `${DB_NAME_VOLL_TEST}` definida em `application-test.properties`.

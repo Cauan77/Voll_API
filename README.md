@@ -123,6 +123,10 @@ A aplicação utiliza variáveis de ambiente para configurações sensíveis, de
 
 A aplicação estará disponível em `http://localhost:8080` (configuração padrão do Tomcat).
 
+Para facilitar na hora de realizar as requisições, clique no botão abaixo:
+
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](docs/postman_collection.json)
+
 ## 📚 Documentação da API
 
 Após iniciar a aplicação, pode aceder à documentação interativa (Swagger UI) para testar os *endpoints*:

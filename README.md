@@ -4,11 +4,11 @@
 
 API Rest da aplicação Voll.med, contendo as funcionalidades de CRUD de médicos e de pacientes, além de agendamento e cancelamento de consultas.
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto é uma API backend desenvolvida em **Java** utilizando o framework **Spring Boot**. A aplicação serve para gerir o funcionamento de uma clínica médica, permitindo o cadastro de médicos e pacientes, bem como o agendamento de consultas com diversas regras de validação de negócio.
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 O projeto foi desenvolvido com as seguintes tecnologias e bibliotecas:
 
@@ -30,20 +30,20 @@ O projeto foi desenvolvido com as seguintes tecnologias e bibliotecas:
 
 ![Mockito](https://img.shields.io/badge/Mockito-Test-informational?style=for-the-badge&logo=mockito&logoColor=white)
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-### 🔐 Autenticação
+### Autenticação
 
   * Login de utilizadores com devolução de Token JWT (Bearer Token).
 
-### 👨‍⚕️ Médicos (`/medicos`) ou 🤒 Pacientes (`/pacientes`):
+### Médicos (`/medicos`) ou Pacientes (`/pacientes`):
 
   * Cadastro;
   * Listagem paginada;
   * Atualização de dados cadastrais;
   * Exclusão lógica (inativação do registro).
 
-### 📅 Consultas (`/consultas`)
+### Consultas (`/consultas`)
 
   * **Agendamento de Consultas**: Inclui validações complexas:
       * Horário de funcionamento da clínica (07:00 às 19:00, seg-sáb);
@@ -56,14 +56,14 @@ O projeto foi desenvolvido com as seguintes tecnologias e bibliotecas:
       * Requer motivo obrigatório;
       * Antecedência mínima de 24 horas.
 
-## ⚙️ Configuração e Execução
+## Configuração e Execução
 
 ### Pré-requisitos
 
   * Java JDK 21 instalado;
   * MySQL instalado.
 
-## 🗺️ Estrutura do Projeto
+## Estrutura do Projeto
 
 A arquitetura segue boas práticas de organização, separando responsabilidades entre Controladores, Domínio e Infraestrutura.
 
@@ -98,7 +98,7 @@ A aplicação utiliza variáveis de ambiente para configurações sensíveis, de
 
 ### Executar a Aplicação
 
-### 🏃 Executando a Aplicação
+### Executando a Aplicação
 
 1.  **Clone o repositório:**
 
@@ -127,14 +127,14 @@ Para facilitar na hora de realizar as requisições, clique no botão abaixo par
 
 [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](api/postman_collection.json) 
 
-## 📚 Documentação da API
+## Documentação da API
 
 Após iniciar a aplicação, pode aceder à documentação interativa (Swagger UI) para testar os *endpoints*:
 
   * **Swagger UI**: `http://localhost:8080/swagger-ui.html`
   * **JSON Docs**: `http://localhost:8080/v3/api-docs`
 
-## 📦 Schemas (Modelos de Dados)
+## Schemas (Modelos de Dados)
 
 Principais objetos utilizados para envio e receção de dados na API.
 
@@ -157,7 +157,7 @@ Principais objetos utilizados para envio e receção de dados na API.
 * **`DadosAutenticacao`**: Login e senha para o endpoint de login.
 * **`Pageable`**: Estrutura padrão do Spring para controlo de paginação (page, size, sort).
 
-### 🔓 Exemplo de Login (Obter Token)
+### Exemplo de Login (Obter Token)
 
 **Via cURL (Windows CMD):**
 
@@ -167,7 +167,7 @@ curl -X POST http://localhost:8080/login ^
   -d "{\"login\":\"<COLE_SEU_EMAIL_AQUI>\", \"senha\":\"<COLE_SUA_SENHA_AQUI>\"}"
 ```
 
-### 🔑 Exemplo de Requisição com Token
+### Exemplo de Requisição com Token
 
 Para acessar os endpoints protegidos (todos exceto `/login`), é obrigatório enviar o token JWT no cabeçalho `Authorization` da requisição.
 
@@ -178,7 +178,7 @@ curl -X GET http://localhost:8080/medicos ^
   -H "Authorization: Bearer <COLE_SEU_TOKEN_AQUI>"
 ```
 
-### 🐧 Exemplos para Linux / macOS (Terminal Bash)
+### Exemplos para Linux / macOS (Terminal Bash)
 
 **1. Login (Obter Token)**
 Use aspas simples `'` para envolver o JSON, facilitando a escrita.
@@ -206,7 +206,7 @@ Portanto, para conseguir fazer o login e obter um token, você precisará inseri
 -- Se a senha for '123456', você terá que fazer um hash com BCrypt e ficará mais ou menos assim:
 INSERT INTO usuarios (login, senha) VALUES ('admin@voll.med', '$2a$12$gR2SQl0HUXlIvwUq8Ah4EO17GLvRhMXZ6w2g6QTCqRkelhBGZRqzS');
 
-## 🧪 Testes
+## Testes
 
 O projeto inclui testes unitários e de integração utilizando JUnit e Mockito. Para correr os testes, certifique-se de configurar a variável de ambiente `${DB_NAME_VOLL_TEST}` definida em `application-test.properties`.
 ## Autor
